@@ -5,7 +5,7 @@ require 'davis/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "davis"
-  spec.version       = davis::VERSION
+  spec.version       = Davis::VERSION
   spec.authors       = ["Colin Rymer"]
   spec.email         = ["colin.rymer@gmail.com"]
   spec.description   = %q{TODO: Write a gem description}
