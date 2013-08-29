@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Davis::VERSION
   spec.authors       = ["Colin Rymer"]
   spec.email         = ["colin.rymer@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{Davis is an opinionated Sinatra application generator.}
+  spec.summary       = spec.description
   spec.homepage      = ""
   spec.license       = "MIT"
 
