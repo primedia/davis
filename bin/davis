@@ -1,0 +1,24 @@
+#!/usr/bin/env ruby
+
+trap("INT") { print "\nExiting. \n"; exit }
+
+$:.unshift File.expand_path("../../lib", __FILE__)
+
+ruby_version_numbers = RUBY_VERSION.split('.').map{|s|s.to_i}
+
+if (ruby_version_numbers <=> [1,9,3]) == -1
+  print "\nMust use Ruby version >= 1.9.3\n"
+  exit
+end
+
+require 'davis/cli'
+
+begin
+  Davis::CLI.start
+rescue StandardError => e
+  puts
+  puts "ERROR: Something went wrong. Exiting."
+  puts e.message
+  puts
+  raise e if ENV['DAVIS_ENV'] =~ /test|development/
+end
